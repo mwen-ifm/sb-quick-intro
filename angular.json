@@ -136,5 +136,8 @@
       }
     }
   },
-  "defaultProject": "sb"
+  "defaultProject": "sb",
+  "cli": {
+    "defaultCollection": "ngx-schematics-for-storybook"
+  }
 }
