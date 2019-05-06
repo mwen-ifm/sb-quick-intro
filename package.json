@@ -10,7 +10,8 @@
     "e2e": "ng e2e",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs",
-    "deck": "mdx-deck deck.mdx"
+    "deck": "mdx-deck deck.mdx",
+    "build-deck": "mdx-deck build deck.mdx -d docs/deck"
   },
   "private": true,
   "dependencies": {
