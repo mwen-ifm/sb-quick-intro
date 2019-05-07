@@ -8,20 +8,34 @@ export { dark as theme } from 'mdx-deck/themes'
 
 # Disclaimer
 
-I am just a user of Storybook, not expert. Don't expect too much from this talk.
-
-
----
-
-# Agenda
-
-- What is Storybook
-- Demo
-- Q&A
+I am just a user of Storybook, NO EXPERT. Some people might thing this is useful, some might not. Let's make this talk quick and short.
 
 ---
 
-# What is it and Why
+# My Story
+
+- Network connection is required, but sometimes it's not reliable
+  - Slow network will slow you down
+- Unexpected bug/exception sometimes block you
+  - Should I fix that issue? 
+- Feedback might a bit slow
+
+---
+
+# What is Storybook
+
+- https://storybook.js.org/
+
+---
+
+# Examples
+
+- http://react.carbondesignsystem.com/
+- https://amcdnl.github.io/material-storybook/
+
+---
+
+# Why
 
 - Consistency
   - Design language
@@ -33,38 +47,48 @@ I am just a user of Storybook, not expert. Don't expect too much from this talk.
 
 ---
 
-# It is NOT
+# Storybook is NOT
 
 - Storybook is not Angular specific. Open platform. Support almost any web platform.
 - Storybook is not for building application.
 
 ---
 
-# Pain points
+# Setup - ng + Storybook
 
-- Network connection is needed
-- Unexpected exception sometimes block you
-- Feedback loop might a bit slow
+- `ng new`
+  - Create a new angular application.
+- `npx -p @storybook/cli sb init --type angular`
+  - Setup angular storybook
+- `npm installngx-schematics-for-storybook @storybook/cli --save-dev`
+- `ng config cli.defaultCollection ngx-schematics-for-storybook`
+  - Install storybook schematics so you will have story file when component is generated 
+- `ng generate component`
+- `npm run storybook`
+  - Start up
 
 --- 
 
-# Mindset shiftted
+# Mindset Changed
 
 - Before, find a spot in the application and start addig new components. Most of time you will endup UI components with lots of business logic. Top to bottom.
 - After, you can put your foucs on the components itself instead of business logic. Bottom up. End up with more reusable components.
 
 ---
 
-# Benifit
+# What I like so far
 
 - Lightly fast recompiling
   - Dynamic Module
+- Realise your dependencies
 
 ---
 
 # Communication
 
 Storybook can be deployed as an static website, very easy to access. Can be used to communicate with designer or any non-techical person.
+
+- https://mwen-ifm.github.io/sb-quick-intro/
 
 ---
 
@@ -73,17 +97,6 @@ Storybook can be deployed as an static website, very easy to access. Can be used
 - A development platform
 - A debug platform
 - A testing platform
-
----
-
-# Demo - ng + Storybook
-
-- `ng new` to create a new angular application.
-- `npx -p @storybook/cli sb init --type angular`
-- `npm installngx-schematics-for-storybook @storybook/cli --save-dev`
-- `ng config cli.defaultCollection ngx-schematics-for-storybook`
-- `ng generate component`
-- `npm run storybook` 
 
 ---
 
